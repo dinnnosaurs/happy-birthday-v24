@@ -261,6 +261,7 @@
             color: #6a4c93;
             cursor: pointer;
             font-size: 1.2rem;
+            outline: none;
         }
 
         /* Back Button */
@@ -414,7 +415,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>For My Dearest Ex ❤️</h1>
+            <h1>Happy Level Up SIPA!!! ✨</h1>
         </header>
 
         <div class="letter-container">
@@ -422,7 +423,6 @@
         </div>
 
         <div class="video-container" id="video-message">
-            <!-- Replace with your video embed code -->
             <iframe src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
 
@@ -439,7 +439,6 @@
         </div>
     </div>
 
-    <!-- Modal for Surprise -->
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal">
             <button class="modal-close" id="modal-close">×</button>
@@ -448,50 +447,50 @@
             </div>
             <div class="modal-body">
                 <div class="playlist">
-                    <h3 style="margin-bottom: 15px;">Songs That Remind Me of Us 💕</h3>
-                    <div class="playlist-item">
-                        <img src="3.jpg" alt="Song cover">
+                    <h3 style="margin-bottom: 15px;">Lagu-lagu Spesial Untukmu 🎵</h3>
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20Rumah%20Ke%20Rumah.mp3">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/mdb.jpg" alt="Song cover">
                         <div class="playlist-item-info">
-                            <div class="playlist-item-title">Our Favorite Memory</div>
-                            <div class="playlist-item-artist">That Artist You Love</div>
+                            <div class="playlist-item-title">Rumah ke Rumah</div>
+                            <div class="playlist-item-artist">Hindia</div>
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    <div class="playlist-item">
-                        <img src="1.jpg" alt="Song cover">
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20semua%20lagu%20cinta%20terdengar%20sama.mp3">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/doves.jpg" alt="Song cover">
                         <div class="playlist-item-info">
-                            <div class="playlist-item-title">That Summer Night</div>
-                            <div class="playlist-item-artist">The Adventure Band</div>
+                            <div class="playlist-item-title">Semua Lagu Cinta Terdengar Sama</div>
+                            <div class="playlist-item-artist">Hindia</div>
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    <div class="playlist-item">
-                        <img src="6.jpg" alt="Song cover">
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Hindia%20-%20everything%20u%20are.mp3">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/doves.jpg" alt="Song cover">
                         <div class="playlist-item-info">
-                            <div class="playlist-item-title">Inside Joke Anthem</div>
-                            <div class="playlist-item-artist">Laugh Out Loud</div>
+                            <div class="playlist-item-title">Everything U Are</div>
+                            <div class="playlist-item-artist">Hindia</div>
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    <div class="playlist-item">
-                        <img src="2.jpeg" alt="Song cover">
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Perunggu%20-%20Pastikan%20Riuh%20Akhiri%20Malammu.mp3">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/memorandum.jpg" alt="Song cover">
                         <div class="playlist-item-info">
-                            <div class="playlist-item-title">Remember When</div>
-                            <div class="playlist-item-artist">The Friendship Vibes</div>
+                            <div class="playlist-item-title">Pastikan Riuh Akhiri Malammu</div>
+                            <div class="playlist-item-artist">Perunggu</div>
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
-                    <div class="playlist-item">
-                        <img src="5.jpg" alt="Song cover">
+                    <div class="playlist-item" data-src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/Perunggu%20-%20Ini%20Abadi.mp3">
+                        <img src="https://raw.githubusercontent.com/dinnnosaurs/happy-birthday-v24/main/memorandum.jpg" alt="Song cover">
                         <div class="playlist-item-info">
-                            <div class="playlist-item-title">Birthday Wishes</div>
-                            <div class="playlist-item-artist">Happy Songs</div>
+                            <div class="playlist-item-title">Ini Abadi</div>
+                            <div class="playlist-item-artist">Perunggu</div>
                         </div>
                         <button class="playlist-item-play"><i class="fas fa-play"></i></button>
                     </div>
                 </div>
                 <div style="margin-top: 20px;">
-                    <a href="#" download class="back-button" style="background: #ffb6c1; border-color: #ffb6c1; color: white;">
+                    <a href="https://drive.google.com/file/d/1DZz6cnPzSEA1LuqimW3YPDA2gaZkoJqm/view?usp=sharing" target="_blank" class="back-button" style="background: #ffb6c1; border-color: #ffb6c1; color: white;">
                         <i class="fas fa-download"></i> Download Your Digital Gift
                     </a>
                 </div>
@@ -499,18 +498,15 @@
         </div>
     </div>
 
-    <!-- Music Controls -->
     <div class="music-controls" id="music-toggle">
         <i class="fas fa-volume-mute" id="music-icon"></i>
     </div>
 
-    <!-- Audio Elements -->
     <audio id="click-sound" preload="auto">
         <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_bb630cc098.mp3?filename=cute-notification-ringtone-1-173850.mp3" type="audio/mpeg">
     </audio>
     <audio id="background-music" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=relaxing-145038.mp3" type="audio/mpeg">
-    </audio>
+        </audio>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.5.1/confetti.browser.min.js"></script>
@@ -523,7 +519,7 @@
             }, 500);
 
             // Typewriter effect for letter
-            const letterContent = "My dearest friend,\n\nAs I sit here thinking about all our memories together, I can't help but smile. From our late-night talks to our spontaneous adventures, you've filled my life with so much joy and laughter. You've been my shoulder to cry on, my partner in crime, and my biggest supporter.\n\nOn your special day, I want you to know how grateful I am to have you in my life. You make every day brighter just by being you - kind, funny, and incredibly thoughtful.\n\nHappy Birthday to my favorite person in the world! Here's to many more years of friendship, laughter, and creating memories together.\n\nWith all my love,\n[Your Name]";
+            const letterContent = "Halo Nurdiansyah,\n\nSelamat ulang tahun! 🎉\n\nSemoga langkahmu menuju S2 Teknologi Hasil Perairan di IPB lewat beasiswa LPDP dilancarkan. Teruslah berkarya dan meneliti, hingga mimpimu menjadi Principal Investigator dan membangun National Center of Excellence for Fish Oil di Indonesia benar-benar nyata.\n\nNikmati hari spesialmu ini dengan penuh suka cita!\n\nSalam hangat,\nSahabatmu";
             
             new Typed('#typed-text', {
                 strings: [letterContent],
@@ -578,23 +574,80 @@
                 modalOverlay.classList.remove('active');
             });
 
-            // Music controls
+            // --- AUDIO PLAYER LOGIC ---
             const musicToggle = document.getElementById('music-toggle');
             const musicIcon = document.getElementById('music-icon');
             const backgroundMusic = document.getElementById('background-music');
-            let isMusicPlaying = false;
+            const playlistItems = document.querySelectorAll('.playlist-item');
+            
+            // To track state specifically for the play buttons
+            let activePlayBtn = null;
 
+            // Handle Playlist Clicks
+            playlistItems.forEach(item => {
+                const playBtn = item.querySelector('.playlist-item-play');
+                
+                playBtn.addEventListener('click', function() {
+                    const songSrc = item.getAttribute('data-src');
+                    const icon = playBtn.querySelector('i');
+                    
+                    // If clicking the currently playing song
+                    if (backgroundMusic.src === songSrc) {
+                        if (!backgroundMusic.paused) {
+                            backgroundMusic.pause();
+                            icon.className = 'fas fa-play';
+                            musicIcon.classList.remove('fa-volume-up');
+                            musicIcon.classList.add('fa-volume-mute');
+                        } else {
+                            backgroundMusic.play();
+                            icon.className = 'fas fa-pause';
+                            musicIcon.classList.remove('fa-volume-mute');
+                            musicIcon.classList.add('fa-volume-up');
+                        }
+                    } else {
+                        // Reset all other buttons to play icon
+                        document.querySelectorAll('.playlist-item-play i').forEach(i => i.className = 'fas fa-play');
+                        
+                        // Set new source and play
+                        backgroundMusic.src = songSrc;
+                        backgroundMusic.play().catch(e => console.error("Audio playback failed:", e));
+                        
+                        // Update current button to pause icon
+                        icon.className = 'fas fa-pause';
+                        
+                        // Update global toggle icon
+                        musicIcon.classList.remove('fa-volume-mute');
+                        musicIcon.classList.add('fa-volume-up');
+                        
+                        activePlayBtn = icon;
+                    }
+                });
+            });
+
+            // Global Music Toggle Button Handle
             musicToggle.addEventListener('click', function() {
-                if (isMusicPlaying) {
+                if (backgroundMusic.src === "") {
+                    // If no song selected yet, play the first one in the list
+                    const firstItem = playlistItems[0];
+                    if(firstItem) {
+                       firstItem.querySelector('.playlist-item-play').click();
+                    }
+                    return;
+                }
+
+                if (!backgroundMusic.paused) {
                     backgroundMusic.pause();
                     musicIcon.classList.remove('fa-volume-up');
                     musicIcon.classList.add('fa-volume-mute');
+                    // Sync active playlist button
+                    if (activePlayBtn) activePlayBtn.className = 'fas fa-play';
                 } else {
-                    backgroundMusic.play().catch(e => console.log('Audio play error:', e));
+                    backgroundMusic.play();
                     musicIcon.classList.remove('fa-volume-mute');
                     musicIcon.classList.add('fa-volume-up');
+                    // Sync active playlist button
+                    if (activePlayBtn) activePlayBtn.className = 'fas fa-pause';
                 }
-                isMusicPlaying = !isMusicPlaying;
             });
 
             // Helper Functions
