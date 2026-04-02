@@ -77,48 +77,50 @@
         z-index: 10;
       }
 
-      /* Cake Base */
+      /* Cake Base (Tier 1) */
       .cake {
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 200px;
-        height: 120px;
+        width: 240px;
+        height: 60px;
         background: linear-gradient(to right, #ff85a2, #ff99b6);
-        border-radius: 10px 10px 0 0;
+        border-radius: 5px 5px 0 0;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
 
+      /* Tier 2 */
       .cake:before {
         content: "";
         position: absolute;
-        top: -40px;
-        left: 0;
-        width: 100%;
-        height: 40px;
+        top: -50px;
+        left: 15%;
+        width: 70%;
+        height: 50px;
         background: linear-gradient(to right, #fc6c85, #ff85a2);
-        border-radius: 10px 10px 0 0;
+        border-radius: 5px 5px 0 0;
       }
 
+      /* Tier 3 */
       .cake:after {
         content: "";
         position: absolute;
-        top: -70px;
-        left: 10%;
-        width: 80%;
-        height: 30px;
+        top: -90px;
+        left: 25%;
+        width: 50%;
+        height: 40px;
         background: linear-gradient(to right, #ffb3c6, #ffcce6);
-        border-radius: 10px 10px 0 0;
+        border-radius: 5px 5px 0 0;
       }
 
       /* Frosting & Decorations */
       .frosting {
         position: absolute;
-        top: -75px;
-        left: 15%;
-        width: 70%;
-        height: 5px;
+        top: -94px;
+        left: 25%;
+        width: 50%;
+        height: 8px;
         background: #ffffff;
         border-radius: 5px;
         box-shadow: 0 0 5px #ffcce6;
@@ -136,18 +138,18 @@
       /* Candles */
       .candle-container {
         position: absolute;
-        top: -95px;
+        top: -120px; /* Aligned with Tier 3 top (-90) minus Candle Height (30) */
         left: 0;
         width: 100%;
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 12px;
         z-index: 15;
       }
 
       .candle {
         position: relative;
-        width: 8px;
+        width: 6px;
         height: 30px;
         background: linear-gradient(to top, #ffff99, #ff9933);
         border-radius: 4px;
@@ -268,7 +270,7 @@
         z-index: 100;
         opacity: 0;
         width: 90%;
-        max-width: 400px;
+        max-width: 450px;
         transition: all 0.5s ease;
         border: 3px solid rgba(255, 255, 255, 0.7);
       }
@@ -307,7 +309,7 @@
 
       .wish-message p {
         color: #333;
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 20px;
         line-height: 1.5;
         font-weight: 500;
@@ -378,128 +380,60 @@
 
       /* Improved Responsive Design */
       @media (max-width: 768px) {
-        .cake-container {
-          width: 250px;
-          height: 250px;
-        }
+        .cake-container { width: 250px; height: 250px; }
+        
+        .cake { width: 180px; height: 50px; }
+        .cake:before { top: -40px; height: 40px; }
+        .cake:after { top: -70px; height: 30px; }
+        .frosting { top: -73px; height: 6px; }
+        
+        .candle-container { gap: 10px; top: -95px; }
+        .candle { width: 5px; height: 25px; }
+        .flame { top: -16px; width: 10px; height: 16px; }
 
-        .cake {
-          width: 160px;
-          height: 90px;
-        }
-
-        .candle-container {
-          gap: 15px;
-        }
-
-        .wish-message h2 {
-          font-size: 24px;
-        }
-
-        .wish-message p {
-          font-size: 18px;
-        }
-
-        .nav-buttons {
-          padding: 0 20px;
-          bottom: 20px;
-        }
-
-        .btn {
-          padding: 10px 18px;
-          font-size: 15px;
-        }
+        .wish-message h2 { font-size: 24px; }
+        .wish-message p { font-size: 16px; }
+        .nav-buttons { padding: 0 20px; bottom: 20px; }
+        .btn { padding: 10px 18px; font-size: 15px; }
       }
 
       @media (max-width: 480px) {
-        .cake-container {
-          width: 200px;
-          height: 200px;
-          margin: 10px auto;
-        }
+        .cake-container { width: 200px; height: 200px; margin: 10px auto; }
+        
+        .cake { width: 150px; height: 40px; }
+        .cake:before { top: -35px; height: 35px; }
+        .cake:after { top: -60px; height: 25px; }
+        .frosting { top: -62px; height: 5px; }
+        
+        .candle-container { gap: 8px; top: -80px; }
+        .candle { width: 4px; height: 20px; }
+        .flame { top: -14px; width: 8px; height: 14px; }
 
-        .cake {
-          width: 130px;
-          height: 80px;
-        }
-
-        .candle-container {
-          gap: 12px;
-          top: -85px;
-        }
-
-        .candle {
-          width: 6px;
-          height: 25px;
-        }
-
-        .wish-message {
-          width: 85%;
-          padding: 20px;
-        }
-
-        .wish-message h2 {
-          font-size: 22px;
-          margin-bottom: 10px;
-        }
-
-        .wish-message p {
-          font-size: 16px;
-          margin-bottom: 15px;
-        }
-
-        .nav-buttons {
-          padding: 0 15px;
-          bottom: 15px;
-        }
-
-        .btn {
-          padding: 8px 14px;
-          font-size: 14px;
-          white-space: nowrap;
-        }
+        .wish-message { width: 85%; padding: 20px; }
+        .wish-message h2 { font-size: 22px; margin-bottom: 10px; }
+        .wish-message p { font-size: 14px; margin-bottom: 15px; }
+        .nav-buttons { padding: 0 15px; bottom: 15px; }
+        .btn { padding: 8px 14px; font-size: 14px; white-space: nowrap; }
       }
 
       /* Extra small devices */
       @media (max-width: 360px) {
-        .cake-container {
-          width: 180px;
-          height: 180px;
-        }
+        .cake-container { width: 180px; height: 180px; }
+        
+        .cake { width: 130px; height: 35px; }
+        .cake:before { top: -30px; height: 30px; }
+        .cake:after { top: -50px; height: 20px; }
+        .frosting { top: -52px; height: 4px; }
+        
+        .candle-container { gap: 6px; top: -67px; }
+        .candle { width: 3px; height: 17px; }
+        .flame { top: -12px; width: 6px; height: 12px; }
 
-        .cake {
-          width: 110px;
-          height: 70px;
-        }
-
-        .candle-container {
-          gap: 10px;
-        }
-
-        .wish-message {
-          width: 90%;
-          padding: 15px;
-        }
-
-        .wish-message h2 {
-          font-size: 20px;
-        }
-
-        .wish-message p {
-          font-size: 14px;
-        }
-
-        .nav-buttons {
-          flex-direction: column;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .btn {
-          width: 100%;
-          text-align: center;
-          font-size: 13px;
-        }
+        .wish-message { width: 90%; padding: 15px; }
+        .wish-message h2 { font-size: 20px; }
+        .wish-message p { font-size: 13px; }
+        .nav-buttons { flex-direction: column; align-items: center; gap: 10px; }
+        .btn { width: 100%; text-align: center; font-size: 13px; }
       }
     </style>
     <link
@@ -529,40 +463,15 @@
   </head>
   <body
     __processed_7adb44bb-c731-4b39-a819-dea3d74cf4d5__="true"
-    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4yMiIsInNjb3JlIjoyMDAyMn1d"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklGOjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4yMiIsInNjb3JlIjoyMDAyMn1d"
     data-new-gr-c-s-check-loaded="14.1235.0"
     data-gr-ext-installed=""
   >
-    <!-- Balloons and Confetti will be added by JavaScript -->
-
-    <!-- Birthday Cake -->
     <div class="cake-container" bis_skin_checked="1">
       <div class="cake" bis_skin_checked="1">
-        <!-- Candles will be added by JavaScript -->
         <div class="candle-container" id="candleContainer" bis_skin_checked="1">
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-          <div class="candle" bis_skin_checked="1">
-            <div class="flame" bis_skin_checked="1"></div>
-            <div class="smoke" bis_skin_checked="1"></div>
-          </div>
-        </div>
+            </div>
 
-        <!-- Frosting & Decorations -->
         <div class="frosting" bis_skin_checked="1"></div>
         <div
           class="decoration"
@@ -657,14 +566,12 @@
       </div>
     </div>
 
-    <!-- Enhanced Wish Message Popup -->
     <div class="wish-message" id="wishMessage" bis_skin_checked="1">
-      <h2>✨ Happy Birthday! ✨</h2>
-      <p>Make a wish, Bestie! May all your dreams come true! 🎂✨</p>
-      <button class="btn" onclick="closeWishMessage()">Thank you! ❤️</button>
+      <h2>✨ Selamat Ulang Tahun, Nurdiansyah! ✨</h2>
+      <p>Happy birthday to my favorite ex! Seriously though, stop being such a grumpy head, let’s leave all that 'marah-marah' energy in the past, okay? While we're at it, i’m also wishing you a dry pillow tonight, so please stop drooling already! On a more serious note, good luck with your post-grad life. i just know you’re gonna kill it and land that dream job in no time. And well, cliché as it sounds, best wishes for everything else!"</p>
+      <button class="btn" onclick="closeWishMessage()">Aamiin! thank you ❤️</button>
     </div>
 
-    <!-- Navigation Buttons -->
     <div class="nav-buttons" bis_skin_checked="1">
       <button class="btn" onclick="goBack()">◀ Back to Memory Lane</button>
       <button class="btn" onclick="goNext()">Next Surprise ▶</button>
@@ -673,7 +580,7 @@
     <script>
       // Global variables
       let candlesBlown = 0;
-      const totalCandles = 5;
+      const totalCandles = 3; // Reduced number of candles to 3
       let allCandlesBlown = false;
 
       // Initialize the page when it loads
@@ -682,34 +589,6 @@
         createBalloons();
         createConfetti();
         createDecorations();
-
-        // Add event listeners for candle interaction
-        document.querySelectorAll(".candle").forEach((candle) => {
-          candle.addEventListener("click", blowOutCandle);
-          candle.addEventListener("touchstart", blowOutCandle); // Better for mobile
-          candle.addEventListener("mouseover", function (e) {
-            if (e.buttons === 0) {
-              // Only trigger on hover when not clicking
-              blowOutCandle.call(this);
-            }
-          });
-        });
-
-        // For better mobile experience with touch
-        document.addEventListener("touchmove", function (e) {
-          const touch = e.touches[0];
-          const element = document.elementFromPoint(
-            touch.clientX,
-            touch.clientY
-          );
-          if (
-            element &&
-            element.classList.contains("candle") &&
-            !element.classList.contains("blown")
-          ) {
-            blowOutCandle.call(element);
-          }
-        });
 
         // Optional: Listen for keyboard input
         document.addEventListener("keypress", function (e) {
@@ -720,7 +599,7 @@
         });
       });
 
-      // Create candles for the cake
+      // Create candles for the cake dynamically
       function createCandles() {
         const candleContainer = document.getElementById("candleContainer");
 
@@ -736,6 +615,17 @@
 
           candle.appendChild(flame);
           candle.appendChild(smoke);
+          
+          // Add event listeners for interaction
+          candle.addEventListener("click", blowOutCandle);
+          candle.addEventListener("touchstart", blowOutCandle); // Better for mobile
+          candle.addEventListener("mouseover", function (e) {
+            if (e.buttons === 0) {
+              // Only trigger on hover when not clicking
+              blowOutCandle.call(this);
+            }
+          });
+          
           candleContainer.appendChild(candle);
         }
       }
@@ -898,6 +788,5 @@
         window.location.href = "letter.html";
       }
     </script>
-
-    </body>
+  </body>
 </html>
